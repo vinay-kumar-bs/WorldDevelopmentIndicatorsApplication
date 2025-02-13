@@ -81,12 +81,12 @@ export default defineComponent({
     const chartData = ref<number[]>([]); //for y axis
     const years = ref<number[]>([]); //for x axis
 
+    const API_URL = process.env.VUE_APP_API_BASE_URL;
+
     onMounted(async (): Promise<void> => {
       try {
         const [countryResponse] = await Promise.all([
-          axios.get<string[]>(
-            "http://localhost:8080/api/devIndicator/countries"
-          ),
+          axios.get<string[]>(`${API_URL}/countries`),
         ]);
         countries.value = countryResponse.data;
       } catch (err) {
@@ -101,7 +101,7 @@ export default defineComponent({
       }
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/devIndicator/country?countryName=${selectedCountry.value}`
+          `${API_URL}/country?countryName=${selectedCountry.value}`
         );
 
         const sortedData = response.data.sort(

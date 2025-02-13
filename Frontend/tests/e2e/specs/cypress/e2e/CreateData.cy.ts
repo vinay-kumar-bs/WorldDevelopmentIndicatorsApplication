@@ -1,10 +1,11 @@
 describe("Create Data Page", () => {
+  const apiBaseUrl = "http://localhost:8080/api/devIndicator";
   beforeEach(() => {
     cy.visit("http://localhost:8081/create");
   });
 
   it("should create data successfully", () => {
-    cy.intercept("POST", "http://localhost:8080/api/devIndicator", {
+    cy.intercept("POST", apiBaseUrl, {
       statusCode: 200,
       body: { message: "Data created successfully." },
     }).as("addRecord");
@@ -46,7 +47,7 @@ describe("Create Data Page", () => {
   });
 
   it("should show an error message if the API fails", () => {
-    cy.intercept("POST", "http://localhost:8080/api/devIndicator", {
+    cy.intercept("POST", apiBaseUrl, {
       statusCode: 500,
       body: { message: "Server error" },
     }).as("addRecordFail");

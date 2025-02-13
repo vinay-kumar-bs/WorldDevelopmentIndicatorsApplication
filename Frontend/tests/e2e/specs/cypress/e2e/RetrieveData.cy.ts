@@ -1,12 +1,13 @@
 // /// <reference types="cypress" />
 
 describe("RetrieveData Component", () => {
+  const apiBaseUrl = "http://localhost:8080/api/devIndicator";
   beforeEach(() => {
-    cy.intercept("GET", "http://localhost:8080/api/devIndicator/countries", {
+    cy.intercept("GET", `${apiBaseUrl}/countries`, {
       body: ["USA", "India", "Canada"],
     }).as("getCountries");
 
-    cy.intercept("GET", "http://localhost:8080/api/devIndicator/years", {
+    cy.intercept("GET", `${apiBaseUrl}/years`, {
       body: [2013, 2014, 2015],
     }).as("getYears");
 

@@ -54,15 +54,14 @@ export default defineComponent({
     const selectedCountry = ref<string>("");
     const selectedYear = ref<number | null>(null);
 
+    const API_URL = process.env.VUE_APP_API_BASE_URL;
+
     const fetchDropDownData = async (): Promise<void> => {
       try {
         const [countryResponse, yearResponse] = await Promise.all([
-          axios.get<string[]>(
-            "http://localhost:8080/api/devIndicator/countries"
-          ),
-          axios.get<number[]>("http://localhost:8080/api/devIndicator/years"),
+          axios.get<string[]>(`${API_URL}/countries`),
+          axios.get<number[]>(`${API_URL}/years`),
         ]);
-
         countries.value = countryResponse.data;
         years.value = yearResponse.data;
       } catch (err) {

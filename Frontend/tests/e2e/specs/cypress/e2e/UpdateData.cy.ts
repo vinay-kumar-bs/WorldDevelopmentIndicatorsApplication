@@ -1,11 +1,12 @@
 /// <reference types="cypress" />
 
 describe("UpdateData Component", () => {
+  const apiBaseUrl = "http://localhost:8080/api/devIndicator";
   beforeEach(() => {
     cy.visit("http://localhost:8081/update");
 
     // Mock the PUT request for updateRecord API
-    cy.intercept("PUT", "http://localhost:8080/api/devIndicator", {
+    cy.intercept("PUT", apiBaseUrl, {
       statusCode: 200,
       body: { message: "Data updated successfully." },
     }).as("updateRecord");

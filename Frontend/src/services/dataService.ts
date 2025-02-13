@@ -2,7 +2,8 @@ import axios from "axios";
 import { Data } from "@/types";
 
 // Base API URL
-const API_URL = "http://localhost:8080/api/devIndicator";
+const API_URL = process.env.VUE_APP_API_BASE_URL;
+
 export const fetchCountriesCount = async () => {
   try {
     const countryCountResponse = await axios.get(`${API_URL}/countries`);

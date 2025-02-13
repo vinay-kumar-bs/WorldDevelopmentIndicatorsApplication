@@ -1,8 +1,9 @@
 /// <reference types="cypress" />
 
 describe("ChartsView Component", () => {
+  const apiBaseUrl = "http://localhost:8080/api/devIndicator";
     beforeEach(() => {
-      cy.intercept("GET", "http://localhost:8080/api/devIndicator/countries", {
+      cy.intercept("GET", `${apiBaseUrl}/countries`, {
         body: ["USA", "India", "Canada"],
       }).as("getCountries");
   
