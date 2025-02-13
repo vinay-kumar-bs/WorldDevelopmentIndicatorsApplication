@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2025-02-03T09:53:35" hostname="VONFX27F0QKQ4" time="0.486">
+  <properties/>
+  <testcase name="testGetUniqueCountries_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.24"/>
+  <testcase name="testDeleteData_NonExistingData_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.046"/>
+  <testcase name="testUpdateData_WhenValidData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.046"/>
+  <testcase name="testGetUniqueCountries_WhenEmptyList_ReturnsNothing" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.006"/>
+  <testcase name="testGetUniqueYears_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.012"/>
+  <testcase name="testDeleteData_WhenInvalidYear_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.006"/>
+  <testcase name="testDeleteData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.012"/>
+  <testcase name="testCreateData_WhenDuplicateData_ReturnsConflict" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.011"/>
+  <testcase name="testGetDevelopmentIndicatorsDataByCountry_NonExistingCountryName_ReturnsNotFound" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.007"/>
+  <testcase name="testDeleteData_MissingParameters_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.017"/>
+  <testcase name="testCreateData_WhenNullData_ReturnsRunTimeException" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.007"/>
+  <testcase name="testGetDevelopmentIndicatorsDataByCountry_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.013"/>
+  <testcase name="testUpdateData_NonExistingData_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.007"/>
+  <testcase name="testRetrieveData_WhenDataNotExists_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.005"/>
+  <testcase name="testRetrieveData_WhenValidRequest_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.014"/>
+  <testcase name="testDeleteData_WhenInvalidCountryName_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.007"/>
+  <testcase name="testCreateData_WhenValidData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.013"/>
+  <testcase name="testRetrieveData_MissingParameters_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.006"/>
+  <system-out><![CDATA[15:23:32.407 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest]: DevelopmentIndicatorsIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:23:32.487 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.wbdi.WorldBankDevIndApplication.WorldBankDevIndApplication for test class com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+Hibernate: 
+    create table development_indicators (
+        country_name varchar(255) not null,
+        "year" integer not null,
+        birth_rate float(53) not null,
+        country_code varchar(255),
+        death_rate float(53) not null,
+        electric_power_consumption float(53) not null,
+        gdp bigint not null,
+        gdp_per_capita float(53) not null,
+        income_group varchar(255),
+        internet_usage_percent float(53) not null,
+        life_expectancy float(53) not null,
+        mortality_rate float(53) not null,
+        population_density float(53) not null,
+        region varchar(255),
+        unemployment_percent float(53) not null,
+        primary key (country_name, "year")
+    )
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        (
+            did1_0.country_name, did1_0."year"
+        ) in ((?, ?))
+Hibernate: 
+    insert 
+    into
+        development_indicators
+        (birth_rate, country_code, death_rate, electric_power_consumption, gdp, gdp_per_capita, income_group, internet_usage_percent, life_expectancy, mortality_rate, population_density, region, unemployment_percent, country_name, "year") 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        (
+            did1_0.country_name, did1_0."year"
+        ) in ((?, ?))
+Hibernate: 
+    insert 
+    into
+        development_indicators
+        (birth_rate, country_code, death_rate, electric_power_consumption, gdp, gdp_per_capita, income_group, internet_usage_percent, life_expectancy, mortality_rate, population_density, region, unemployment_percent, country_name, "year") 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        distinct did1_0.country_name 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    delete 
+    from
+        development_indicators 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    delete 
+    from
+        development_indicators 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+2025-02-03T15:23:36.025+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [o-auto-1-exec-2] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: Canada and year: 2016
+Hibernate: 
+    select
+        count(*) 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        (
+            did1_0.country_name, did1_0."year"
+        ) in ((?, ?))
+Hibernate: 
+    insert 
+    into
+        development_indicators
+        (birth_rate, country_code, death_rate, electric_power_consumption, gdp, gdp_per_capita, income_group, internet_usage_percent, life_expectancy, mortality_rate, population_density, region, unemployment_percent, country_name, "year") 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+Hibernate: 
+    update
+        development_indicators 
+    set
+        birth_rate=?,
+        country_code=?,
+        death_rate=?,
+        electric_power_consumption=?,
+        gdp=?,
+        gdp_per_capita=?,
+        income_group=?,
+        internet_usage_percent=?,
+        life_expectancy=?,
+        mortality_rate=?,
+        population_density=?,
+        region=?,
+        unemployment_percent=? 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    delete 
+    from
+        development_indicators 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    select
+        distinct did1_0.country_name 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        (
+            did1_0.country_name, did1_0."year"
+        ) in ((?, ?))
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        (
+            did1_0.country_name, did1_0."year"
+        ) in ((?, ?))
+Hibernate: 
+    insert 
+    into
+        development_indicators
+        (birth_rate, country_code, death_rate, electric_power_consumption, gdp, gdp_per_capita, income_group, internet_usage_percent, life_expectancy, mortality_rate, population_density, region, unemployment_percent, country_name, "year") 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        development_indicators
+        (birth_rate, country_code, death_rate, electric_power_consumption, gdp, gdp_per_capita, income_group, internet_usage_percent, life_expectancy, mortality_rate, population_density, region, unemployment_percent, country_name, "year") 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        distinct did1_0."year" 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    delete 
+    from
+        development_indicators 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    delete 
+    from
+        development_indicators 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        (
+            did1_0.country_name, did1_0."year"
+        ) in ((?, ?))
+Hibernate: 
+    insert 
+    into
+        development_indicators
+        (birth_rate, country_code, death_rate, electric_power_consumption, gdp, gdp_per_capita, income_group, internet_usage_percent, life_expectancy, mortality_rate, population_density, region, unemployment_percent, country_name, "year") 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+Hibernate: 
+    delete 
+    from
+        development_indicators 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        (
+            did1_0.country_name, did1_0."year"
+        ) in ((?, ?))
+Hibernate: 
+    insert 
+    into
+        development_indicators
+        (birth_rate, country_code, death_rate, electric_power_consumption, gdp, gdp_per_capita, income_group, internet_usage_percent, life_expectancy, mortality_rate, population_density, region, unemployment_percent, country_name, "year") 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+2025-02-03T15:23:36.151+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [o-auto-1-exec-8] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: American Samoa and year: 1960
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    delete 
+    from
+        development_indicators 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=?
+2025-02-03T15:23:36.160+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [o-auto-1-exec-9] c.w.W.S.DevelopmentIndicatorsService     : Data does not exists for country name: nonExistingCountry
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        (
+            did1_0.country_name, did1_0."year"
+        ) in ((?, ?))
+Hibernate: 
+    insert 
+    into
+        development_indicators
+        (birth_rate, country_code, death_rate, electric_power_consumption, gdp, gdp_per_capita, income_group, internet_usage_percent, life_expectancy, mortality_rate, population_density, region, unemployment_percent, country_name, "year") 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        (
+            did1_0.country_name, did1_0."year"
+        ) in ((?, ?))
+Hibernate: 
+    insert 
+    into
+        development_indicators
+        (birth_rate, country_code, death_rate, electric_power_consumption, gdp, gdp_per_capita, income_group, internet_usage_percent, life_expectancy, mortality_rate, population_density, region, unemployment_percent, country_name, "year") 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    delete 
+    from
+        development_indicators 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    delete 
+    from
+        development_indicators 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+2025-02-03T15:23:36.206+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [o-auto-1-exec-3] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for update.
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        (
+            did1_0.country_name, did1_0."year"
+        ) in ((?, ?))
+Hibernate: 
+    insert 
+    into
+        development_indicators
+        (birth_rate, country_code, death_rate, electric_power_consumption, gdp, gdp_per_capita, income_group, internet_usage_percent, life_expectancy, mortality_rate, population_density, region, unemployment_percent, country_name, "year") 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    delete 
+    from
+        development_indicators 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+2025-02-03T15:23:36.235+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [o-auto-1-exec-6] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 2022
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        did1_0.country_name=? 
+        and did1_0."year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0 
+    where
+        (
+            did1_0.country_name, did1_0."year"
+        ) in ((?, ?))
+Hibernate: 
+    insert 
+    into
+        development_indicators
+        (birth_rate, country_code, death_rate, electric_power_consumption, gdp, gdp_per_capita, income_group, internet_usage_percent, life_expectancy, mortality_rate, population_density, region, unemployment_percent, country_name, "year") 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+Hibernate: 
+    delete 
+    from
+        development_indicators 
+    where
+        country_name=? 
+        and "year"=?
+Hibernate: 
+    select
+        did1_0.country_name,
+        did1_0."year",
+        did1_0.birth_rate,
+        did1_0.country_code,
+        did1_0.death_rate,
+        did1_0.electric_power_consumption,
+        did1_0.gdp,
+        did1_0.gdp_per_capita,
+        did1_0.income_group,
+        did1_0.internet_usage_percent,
+        did1_0.life_expectancy,
+        did1_0.mortality_rate,
+        did1_0.population_density,
+        did1_0.region,
+        did1_0.unemployment_percent 
+    from
+        development_indicators did1_0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

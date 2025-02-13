@@ -1,0 +1,74 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint",
+    "test": "jest",
+    "cypress:open": "node --loader ts-node/esm node_modules/.bin/cypress open"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.7",
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13",
+    "vue-chartjs": "^5.3.2",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-transform-runtime": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@jest/globals": "^29.7.0",
+    "@testing-library/vue": "^8.1.0",
+    "@types/axios": "^0.9.36",
+    "@types/cypress": "^0.1.6",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^22.13.1",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-e2e-cypress": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-plugin-unit-jest": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/compiler-sfc": "^3.5.13",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/vue3-jest": "^27.0.0",
+    "axios-mock-adapter": "^2.1.0",
+    "babel-jest": "^27.5.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "jest": "^27.5.1",
+    "jest-canvas-mock": "^2.5.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~4.5.5",
+    "vue-loader": "^17.4.2"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.vue$": "@vue/vue3-jest"
+    }
+  }
+}

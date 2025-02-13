@@ -1,0 +1,5 @@
+2025-02-13T12:29:36.828+05:30 ERROR 95732 --- [WorldBankDevIndApplication] [http-nio-8080-exec-8] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: Canada and year: 2013
+2025-02-13T12:30:54.671+05:30 ERROR 95732 --- [WorldBankDevIndApplication] [http-nio-8080-exec-3] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: Canada and year: 2013
+2025-02-13T12:32:02.940+05:30 ERROR 95732 --- [WorldBankDevIndApplication] [http-nio-8080-exec-8] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: Canada and year: 2013
+2025-02-13T12:32:50.131+05:30 ERROR 95732 --- [WorldBankDevIndApplication] [http-nio-8080-exec-3] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: Canada and year: 2013
+2025-02-13T12:54:04.332+05:30 ERROR 95732 --- [WorldBankDevIndApplication] [http-nio-8080-exec-6] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for country name: Canada and year: 2013

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DevelopmentIndicatorsController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">WorldBankDevIndApplication</a> &gt; <a href="index.source.html" class="el_package">com.wbdi.WorldBankDevIndApplication.Controller</a> &gt; <span class="el_source">DevelopmentIndicatorsController.java</span></div><h1>DevelopmentIndicatorsController.java</h1><pre class="source lang-java linenums">package com.wbdi.WorldBankDevIndApplication.Controller;
+
+import com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData;
+import com.wbdi.WorldBankDevIndApplication.Service.DevelopmentIndicatorsService;
+import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+
+@RestController
+@CrossOrigin
+@RequestMapping(&quot;/api/devIndicator&quot;)
+<span class="fc" id="L19">public class DevelopmentIndicatorsController {</span>
+
+    @Autowired
+    private DevelopmentIndicatorsService service;
+
+<span class="fc" id="L24">    private static final Logger logger = LoggerFactory.getLogger(DevelopmentIndicatorsController.class);</span>
+
+
+    @PostMapping
+    public ResponseEntity&lt;String&gt; createData(@Valid @RequestBody DevelopmentIndicatorsData data)  {
+<span class="fc" id="L29">        logger.info(&quot;Executing {} with data: {}&quot;, getClass(), data);</span>
+        try {
+<span class="fc" id="L31">            service.createDevIndData(data);</span>
+<span class="fc" id="L32">            logger.info(&quot;Data added successfully.&quot;);</span>
+<span class="fc" id="L33">            return ResponseEntity.ok(&quot;Data Added Successfully.&quot;);</span>
+
+<span class="fc" id="L35">        } catch (IllegalArgumentException e) {</span>
+<span class="fc" id="L36">            logger.warn(&quot;Conflict While adding the data: {}&quot;,e.getMessage());</span>
+<span class="fc" id="L37">            return ResponseEntity.status(409).body(e.getMessage());</span>
+
+<span class="fc" id="L39">        }catch (Exception e){</span>
+<span class="fc" id="L40">            logger.error(&quot;Error while adding the data: {}&quot;,e.getMessage(),e);</span>
+<span class="fc" id="L41">            return ResponseEntity.status(500).body(&quot;Error &quot;+e.getMessage());</span>
+        }
+    }
+
+
+
+    @GetMapping
+    public ResponseEntity&lt;Object&gt; retrieveData(@Valid @RequestParam String countryName, @RequestParam int year){
+<span class="fc" id="L49">        logger.info(&quot;Executing {} to retrieve data for country: {}, year: {}&quot;,getClass(), countryName, year);</span>
+        try {
+<span class="fc" id="L51">            logger.info(&quot;Data retrieved successfully.&quot;);</span>
+<span class="fc" id="L52">            return ResponseEntity.ok().body(service.retrieveDevIndData(countryName, year));</span>
+
+<span class="fc" id="L54">        } catch (IllegalArgumentException e){</span>
+<span class="fc" id="L55">            logger.warn(&quot;Bad request while retrieving data: {}&quot;, e.getMessage());</span>
+<span class="fc" id="L56">            return ResponseEntity.status(400).body(e.getMessage());</span>
+
+<span class="fc" id="L58">        } catch (Exception e) {</span>
+<span class="fc" id="L59">            logger.error(&quot;Error in retrieving data: {}&quot;, e.getMessage(), e);</span>
+<span class="fc" id="L60">            return ResponseEntity.status(500).body(Map.of(&quot;Error&quot;,e.getMessage()));</span>
+        }
+    }
+
+
+
+    @PutMapping
+    public ResponseEntity&lt;String&gt; updateData(@Valid @RequestBody DevelopmentIndicatorsData data) {
+<span class="fc" id="L68">        logger.info(&quot;Executing {} to update data: {}&quot;,getClass(),data);</span>
+        try {
+<span class="fc" id="L70">            service.updateDevIndData(data);</span>
+<span class="fc" id="L71">            logger.info(&quot;Data updated successfully&quot;);</span>
+<span class="fc" id="L72">            return ResponseEntity.ok(&quot;Data Updated Successfully.&quot;);</span>
+
+<span class="fc" id="L74">        }catch (IllegalArgumentException e) {</span>
+<span class="fc" id="L75">            logger.warn(&quot;Bad request for updating data: {}&quot;,e.getMessage());</span>
+<span class="fc" id="L76">            return ResponseEntity.status(400).body(e.getMessage());</span>
+
+<span class="nc" id="L78">        }catch (Exception e) {</span>
+<span class="nc" id="L79">            logger.error(&quot;Error while updating the data: {}&quot;,e.getMessage(),e);</span>
+<span class="nc" id="L80">            return ResponseEntity.status(500).body(&quot;Error &quot; + e.getMessage());          //We cannot use body method without using status method first.</span>
+        }
+    }
+
+
+
+    @DeleteMapping
+    public ResponseEntity&lt;String&gt; deleteData(@Valid @RequestParam String countryName, @RequestParam int year){
+<span class="fc" id="L88">        logger.info(&quot;Executing {} for deleting data of country name: {} and year: {}&quot;,getClass(),countryName,year);</span>
+        try {
+<span class="fc" id="L90">            service.deleteDevIndData(countryName, year);</span>
+<span class="fc" id="L91">            logger.info(&quot;Data deleted successfully.&quot;);</span>
+<span class="fc" id="L92">            return ResponseEntity.ok(&quot;Data Deleted Successfully.&quot;);</span>
+
+<span class="fc" id="L94">        } catch (IllegalArgumentException e) {</span>
+<span class="fc" id="L95">            logger.warn(&quot;Bad request while deleting data: {}&quot;,e.getMessage());</span>
+<span class="fc" id="L96">            return ResponseEntity.status(400).body(e.getMessage());</span>
+
+<span class="nc" id="L98">        }catch (Exception e) {</span>
+<span class="nc" id="L99">            logger.error(&quot;Error while deleting the data: {}&quot;,e.getMessage(),e);</span>
+<span class="nc" id="L100">            return ResponseEntity.status(500).body(&quot;Error &quot; +e.getMessage());</span>
+        }
+    }
+
+
+
+    @GetMapping(&quot;/countries&quot;)
+    public ResponseEntity&lt;List&lt;String&gt;&gt; getCountry() {
+<span class="fc" id="L108">        logger.info(&quot;Executing {} for retrieving unique countries.&quot;,getClass());</span>
+        try {
+<span class="fc" id="L110">            logger.info(&quot;Unique countries retrieved successfully.&quot;);</span>
+<span class="fc" id="L111">            return ResponseEntity.ok(service.getUniqueCountries());</span>
+
+<span class="fc" id="L113">        } catch (Exception e) {</span>
+<span class="fc" id="L114">            logger.error(&quot;Error while retrieving unique countries: {}&quot;,e.getMessage(),e);</span>
+<span class="fc" id="L115">            return ResponseEntity.status(500).body(Collections.emptyList());</span>
+        }
+
+    }
+
+
+
+    @GetMapping(&quot;/years&quot;)
+    public ResponseEntity&lt;List&lt;Integer&gt;&gt; getYear() {
+<span class="fc" id="L124">        logger.info(&quot;Executing {} for retrieving unique years.&quot;,getClass());</span>
+        try {
+<span class="fc" id="L126">            logger.info(&quot;Unique years retrieved successfully.&quot;);</span>
+<span class="fc" id="L127">            return ResponseEntity.ok(service.getUniqueYears());</span>
+
+<span class="fc" id="L129">        } catch (Exception e) {</span>
+<span class="fc" id="L130">            logger.error(&quot;Error while retrieving unique years: {}&quot;,e.getMessage(),e);</span>
+<span class="fc" id="L131">            return ResponseEntity.status(500).body(Collections.emptyList());</span>
+        }
+    }
+
+    @GetMapping(&quot;/country&quot;)
+    public ResponseEntity&lt;List&lt;DevelopmentIndicatorsData&gt;&gt; getDevelopmentIndicatorsDataByCountry(@RequestParam String countryName){
+<span class="fc" id="L137">        logger.info(&quot;Executing {} for retrieving data of country name: {}&quot;,getClass(),countryName);</span>
+        try {
+<span class="fc" id="L139">            logger.info(&quot;Data retrieved for country name {} successfully.&quot;,countryName);</span>
+<span class="fc" id="L140">            return ResponseEntity.ok(service.getDevelopmentIndicatorsDataByCountry(countryName));</span>
+<span class="fc" id="L141">        } catch (IllegalArgumentException e){</span>
+<span class="fc" id="L142">            logger.warn(&quot;Invalid country name for retrieving country name {}&quot;,e.getMessage());</span>
+<span class="fc" id="L143">            return ResponseEntity.status(404).body(null);</span>
+<span class="fc" id="L144">        } catch (Exception e) {</span>
+<span class="fc" id="L145">            logger.error(&quot;Error While retrieving the data by country name {}&quot;,e.getMessage(),e);</span>
+<span class="fc" id="L146">            return ResponseEntity.status(500).body(Collections.emptyList());</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
