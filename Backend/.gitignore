@@ -1,1 +1,39 @@
+# Build Output
+/build/
+out/
+target/
+
+# Gradle Files
+.gradle/
+*.gradle.lock
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS-Specific Files
+.DS_Store
+Thumbs.db
+
+# JAR/WAR/EAR Archives
+*.jar
+
+# Local Environment Config
 application.properties
+application.yml
+application-test.properties
+
