@@ -2,16 +2,13 @@
 
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import org.antlr.v4.runtime.misc.NotNull;
 import org.hibernate.validator.constraints.NotBlank;
 
 
 @Entity
 @Table(name = &quot;development_indicators&quot;)
 @IdClass(DataId.class)
-<span class="fc" id="L14">public class DevelopmentIndicatorsData {</span>
+<span class="fc" id="L11">public class DevelopmentIndicatorsData {</span>
 
     @Id
     @NotBlank(message = &quot;It is required&quot;)
@@ -38,123 +35,123 @@ import org.hibernate.validator.constraints.NotBlank;
     private double unemploymentPercent;
 
     public String getCountryName() {
-<span class="fc" id="L41">        return countryName;</span>
+<span class="fc" id="L38">        return countryName;</span>
     }
 
     public void setCountryName(String countryName) {
-<span class="fc" id="L45">        this.countryName = countryName;</span>
-<span class="fc" id="L46">    }</span>
+<span class="fc" id="L42">        this.countryName = countryName;</span>
+<span class="fc" id="L43">    }</span>
 
     public String getCountryCode() {
-<span class="fc" id="L49">        return countryCode;</span>
+<span class="fc" id="L46">        return countryCode;</span>
     }
 
     public void setCountryCode(String countryCode) {
-<span class="fc" id="L53">        this.countryCode = countryCode;</span>
-<span class="fc" id="L54">    }</span>
+<span class="fc" id="L50">        this.countryCode = countryCode;</span>
+<span class="fc" id="L51">    }</span>
 
     public String getRegion() {
-<span class="fc" id="L57">        return region;</span>
+<span class="fc" id="L54">        return region;</span>
     }
 
     public void setRegion(String region) {
-<span class="fc" id="L61">        this.region = region;</span>
-<span class="fc" id="L62">    }</span>
+<span class="fc" id="L58">        this.region = region;</span>
+<span class="fc" id="L59">    }</span>
 
     public String getIncomeGroup() {
-<span class="fc" id="L65">        return incomeGroup;</span>
+<span class="fc" id="L62">        return incomeGroup;</span>
     }
 
     public void setIncomeGroup(String incomeGroup) {
-<span class="fc" id="L69">        this.incomeGroup = incomeGroup;</span>
-<span class="fc" id="L70">    }</span>
+<span class="fc" id="L66">        this.incomeGroup = incomeGroup;</span>
+<span class="fc" id="L67">    }</span>
 
     public int getYear() {
-<span class="fc" id="L73">        return year;</span>
+<span class="fc" id="L70">        return year;</span>
     }
 
     public void setYear(int year) {
-<span class="fc" id="L77">        this.year = year;</span>
-<span class="fc" id="L78">    }</span>
+<span class="fc" id="L74">        this.year = year;</span>
+<span class="fc" id="L75">    }</span>
 
     public double getBirthRate() {
-<span class="fc" id="L81">        return birthRate;</span>
+<span class="fc" id="L78">        return birthRate;</span>
     }
 
     public void setBirthRate(double birthRate) {
-<span class="fc" id="L85">        this.birthRate = birthRate;</span>
-<span class="fc" id="L86">    }</span>
+<span class="fc" id="L82">        this.birthRate = birthRate;</span>
+<span class="fc" id="L83">    }</span>
 
     public double getDeathRate() {
-<span class="fc" id="L89">        return deathRate;</span>
+<span class="fc" id="L86">        return deathRate;</span>
     }
 
     public void setDeathRate(double deathRate) {
-<span class="fc" id="L93">        this.deathRate = deathRate;</span>
-<span class="fc" id="L94">    }</span>
+<span class="fc" id="L90">        this.deathRate = deathRate;</span>
+<span class="fc" id="L91">    }</span>
 
     public double getElectricPowerConsumption() {
-<span class="fc" id="L97">        return electricPowerConsumption;</span>
+<span class="fc" id="L94">        return electricPowerConsumption;</span>
     }
 
     public void setElectricPowerConsumption(double electricPowerConsumption) {
-<span class="fc" id="L101">        this.electricPowerConsumption = electricPowerConsumption;</span>
-<span class="fc" id="L102">    }</span>
+<span class="fc" id="L98">        this.electricPowerConsumption = electricPowerConsumption;</span>
+<span class="fc" id="L99">    }</span>
 
     public long getGdp() {
-<span class="fc" id="L105">        return gdp;</span>
+<span class="fc" id="L102">        return gdp;</span>
     }
 
     public void setGdp(long gdp) {
-<span class="fc" id="L109">        this.gdp = gdp;</span>
-<span class="fc" id="L110">    }</span>
+<span class="fc" id="L106">        this.gdp = gdp;</span>
+<span class="fc" id="L107">    }</span>
 
     public double getGdpPerCapita() {
-<span class="fc" id="L113">        return gdpPerCapita;</span>
+<span class="fc" id="L110">        return gdpPerCapita;</span>
     }
 
     public void setGdpPerCapita(double gdpPerCapita) {
-<span class="fc" id="L117">        this.gdpPerCapita = gdpPerCapita;</span>
-<span class="fc" id="L118">    }</span>
+<span class="fc" id="L114">        this.gdpPerCapita = gdpPerCapita;</span>
+<span class="fc" id="L115">    }</span>
 
     public double getInternetUsagePercent() {
-<span class="fc" id="L121">        return internetUsagePercent;</span>
+<span class="fc" id="L118">        return internetUsagePercent;</span>
     }
 
     public void setInternetUsagePercent(double internetUsagePercent) {
-<span class="fc" id="L125">        this.internetUsagePercent = internetUsagePercent;</span>
-<span class="fc" id="L126">    }</span>
+<span class="fc" id="L122">        this.internetUsagePercent = internetUsagePercent;</span>
+<span class="fc" id="L123">    }</span>
 
     public double getMortalityRate() {
-<span class="fc" id="L129">        return mortalityRate;</span>
+<span class="fc" id="L126">        return mortalityRate;</span>
     }
 
     public void setMortalityRate(double mortalityRate) {
-<span class="fc" id="L133">        this.mortalityRate = mortalityRate;</span>
-<span class="fc" id="L134">    }</span>
+<span class="fc" id="L130">        this.mortalityRate = mortalityRate;</span>
+<span class="fc" id="L131">    }</span>
 
     public double getLifeExpectancy() {
-<span class="fc" id="L137">        return lifeExpectancy;</span>
+<span class="fc" id="L134">        return lifeExpectancy;</span>
     }
 
     public void setLifeExpectancy(double lifeExpectancy) {
-<span class="fc" id="L141">        this.lifeExpectancy = lifeExpectancy;</span>
-<span class="fc" id="L142">    }</span>
+<span class="fc" id="L138">        this.lifeExpectancy = lifeExpectancy;</span>
+<span class="fc" id="L139">    }</span>
 
     public double getPopulationDensity() {
-<span class="fc" id="L145">        return populationDensity;</span>
+<span class="fc" id="L142">        return populationDensity;</span>
     }
 
     public void setPopulationDensity(double populationDensity) {
-<span class="fc" id="L149">        this.populationDensity = populationDensity;</span>
-<span class="fc" id="L150">    }</span>
+<span class="fc" id="L146">        this.populationDensity = populationDensity;</span>
+<span class="fc" id="L147">    }</span>
 
     public double getUnemploymentPercent() {
-<span class="fc" id="L153">        return unemploymentPercent;</span>
+<span class="fc" id="L150">        return unemploymentPercent;</span>
     }
 
     public void setUnemploymentPercent(double unemploymentPercent) {
-<span class="fc" id="L157">        this.unemploymentPercent = unemploymentPercent;</span>
-<span class="fc" id="L158">    }</span>
+<span class="fc" id="L154">        this.unemploymentPercent = unemploymentPercent;</span>
+<span class="fc" id="L155">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

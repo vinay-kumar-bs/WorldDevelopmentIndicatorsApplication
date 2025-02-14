@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.475s</div>
+<div class="counter">0.467s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,37 +79,37 @@
 </thead>
 <tr>
 <td class="success">testCreateData_WhenDuplicateData_ReturnsConflict</td>
-<td class="success">0.011s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testCreateData_WhenNullData_ReturnsRunTimeException</td>
-<td class="success">0.007s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testCreateData_WhenValidData_ReturnsSuccess</td>
-<td class="success">0.013s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testDeleteData_MissingParameters_ReturnsBadRequest</td>
-<td class="success">0.017s</td>
+<td class="success">0.019s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testDeleteData_NonExistingData_ReturnsBadRequest</td>
-<td class="success">0.046s</td>
+<td class="success">0.043s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testDeleteData_ReturnsSuccess</td>
-<td class="success">0.012s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testDeleteData_WhenInvalidCountryName_ReturnsBadRequest</td>
-<td class="success">0.007s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -119,22 +119,22 @@
 </tr>
 <tr>
 <td class="success">testGetDevelopmentIndicatorsDataByCountry_NonExistingCountryName_ReturnsNotFound</td>
-<td class="success">0.007s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetDevelopmentIndicatorsDataByCountry_ReturnsSuccess</td>
-<td class="success">0.013s</td>
+<td class="success">0.015s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetUniqueCountries_ReturnsSuccess</td>
-<td class="success">0.240s</td>
+<td class="success">0.231s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetUniqueCountries_WhenEmptyList_ReturnsNothing</td>
-<td class="success">0.006s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -144,17 +144,17 @@
 </tr>
 <tr>
 <td class="success">testRetrieveData_MissingParameters_ReturnsBadRequest</td>
-<td class="success">0.006s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testRetrieveData_WhenDataNotExists_ReturnsBadRequest</td>
 <td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testRetrieveData_WhenDataNotExists_ReturnsBadRequest</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testRetrieveData_WhenValidRequest_ReturnsSuccess</td>
-<td class="success">0.014s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -164,7 +164,7 @@
 </tr>
 <tr>
 <td class="success">testUpdateData_WhenValidData_ReturnsSuccess</td>
-<td class="success">0.046s</td>
+<td class="success">0.049s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -172,8 +172,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>15:23:32.407 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest]: DevelopmentIndicatorsIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:23:32.487 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.wbdi.WorldBankDevIndApplication.WorldBankDevIndApplication for test class com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest
+<pre>11:18:10.509 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest]: DevelopmentIndicatorsIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:18:10.580 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.wbdi.WorldBankDevIndApplication.WorldBankDevIndApplication for test class com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -323,7 +323,7 @@ Hibernate:
     where
         did1_0.country_name=? 
         and did1_0.&quot;year&quot;=?
-2025-02-03T15:23:36.025+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [o-auto-1-exec-2] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: Canada and year: 2016
+2025-02-14T11:18:13.838+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [o-auto-1-exec-2] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: Canada and year: 2016
 Hibernate: 
     select
         count(*) 
@@ -783,7 +783,7 @@ Hibernate:
     where
         did1_0.country_name=? 
         and did1_0.&quot;year&quot;=?
-2025-02-03T15:23:36.151+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [o-auto-1-exec-8] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: American Samoa and year: 1960
+2025-02-14T11:18:13.963+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [o-auto-1-exec-8] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: American Samoa and year: 1960
 Hibernate: 
     select
         did1_0.country_name,
@@ -831,7 +831,7 @@ Hibernate:
         development_indicators did1_0 
     where
         did1_0.country_name=?
-2025-02-03T15:23:36.160+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [o-auto-1-exec-9] c.w.W.S.DevelopmentIndicatorsService     : Data does not exists for country name: nonExistingCountry
+2025-02-14T11:18:13.973+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [-auto-1-exec-10] c.w.W.S.DevelopmentIndicatorsService     : Data does not exists for country name: nonExistingCountry
 Hibernate: 
     select
         did1_0.country_name,
@@ -1051,7 +1051,7 @@ Hibernate:
     where
         did1_0.country_name=? 
         and did1_0.&quot;year&quot;=?
-2025-02-03T15:23:36.206+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [o-auto-1-exec-3] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for update.
+2025-02-14T11:18:14.027+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [o-auto-1-exec-3] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for update.
 Hibernate: 
     select
         did1_0.country_name,
@@ -1212,7 +1212,7 @@ Hibernate:
     where
         did1_0.country_name=? 
         and did1_0.&quot;year&quot;=?
-2025-02-03T15:23:36.235+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [o-auto-1-exec-6] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 2022
+2025-02-14T11:18:14.052+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [o-auto-1-exec-6] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 2022
 Hibernate: 
     select
         did1_0.country_name,
@@ -1362,7 +1362,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.12</a> at Feb 3, 2025, 3:23:37 PM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at Feb 14, 2025, 11:18:14 AM</p>
 </div>
 </div>
 </body>

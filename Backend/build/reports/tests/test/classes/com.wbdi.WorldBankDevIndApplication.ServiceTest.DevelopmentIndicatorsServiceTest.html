@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">testCreateData_WhenDataExists_ThrowsException</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -94,7 +94,7 @@
 </tr>
 <tr>
 <td class="success">testDeleteData_ReturnsSuccess</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -109,12 +109,12 @@
 </tr>
 <tr>
 <td class="success">testFindUniqueCountries_WhenNoCountriesFound_ReturnsEmptyList</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testFindUniqueYears_ReturnsSuccess</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -124,7 +124,7 @@
 </tr>
 <tr>
 <td class="success">testGetDevelopmentIndicatorsDataByCountry_ReturnsSuccess</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -134,17 +134,17 @@
 </tr>
 <tr>
 <td class="success">testGetDevelopmentIndicatorsDataByCountry_WhenInvalidCountryName_ThrowsException</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testIsDataExists_DataDoesNotExist</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testIsDataExists_DataExists</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@
 </tr>
 <tr>
 <td class="success">testIsValidYear_InvalidYear</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -169,7 +169,7 @@
 </tr>
 <tr>
 <td class="success">testRetrieveData_ReturnsSuccess</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -197,14 +197,14 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-02-03T15:23:36.426+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Invalid country name for getting data by country name: 123Invalid
-2025-02-03T15:23:36.427+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for update.
-2025-02-03T15:23:36.433+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data for country is null
-2025-02-03T15:23:36.436+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for country name: nonExistingCountry and year: 1970
-2025-02-03T15:23:36.437+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exists for country name: nonExistingCountry
-2025-02-03T15:23:36.439+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 1970
-2025-02-03T15:23:36.440+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data is null
-2025-02-03T15:23:36.441+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: China and year: 2015
+<pre>2025-02-14T11:18:14.218+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Invalid country name for getting data by country name: 123Invalid
+2025-02-14T11:18:14.219+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for update.
+2025-02-14T11:18:14.225+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data for country is null
+2025-02-14T11:18:14.228+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for country name: nonExistingCountry and year: 1970
+2025-02-14T11:18:14.228+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exists for country name: nonExistingCountry
+2025-02-14T11:18:14.230+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 1970
+2025-02-14T11:18:14.231+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data is null
+2025-02-14T11:18:14.233+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: China and year: 2015
 </pre>
 </span>
 </div>
@@ -216,7 +216,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.12</a> at Feb 3, 2025, 3:23:37 PM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at Feb 14, 2025, 11:18:14 AM</p>
 </div>
 </div>
 </body>

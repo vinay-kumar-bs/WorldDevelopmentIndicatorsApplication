@@ -2,7 +2,6 @@
 
 import jakarta.persistence.Embeddable;
 
-
 import java.io.Serializable;
 
 
@@ -12,29 +11,29 @@ public class DataId implements Serializable {
     private String countryName;
     private int year;
 
-<span class="fc" id="L15">    public DataId(){</span>
-<span class="fc" id="L16">    }</span>
+<span class="fc" id="L14">    public DataId() {</span>
+<span class="fc" id="L15">    }</span>
 
-<span class="nc" id="L18">    public DataId(String countryName, int year) {</span>
-<span class="nc" id="L19">        this.countryName = countryName;</span>
-<span class="nc" id="L20">        this.year = year;</span>
-<span class="nc" id="L21">    }</span>
+<span class="nc" id="L17">    public DataId(String countryName, int year) {</span>
+<span class="nc" id="L18">        this.countryName = countryName;</span>
+<span class="nc" id="L19">        this.year = year;</span>
+<span class="nc" id="L20">    }</span>
 
 
     public String getCountryName() {
-<span class="nc" id="L25">        return countryName;</span>
+<span class="nc" id="L24">        return countryName;</span>
     }
 
     public void setCountryName(String countryName) {
-<span class="nc" id="L29">        this.countryName = countryName;</span>
-<span class="nc" id="L30">    }</span>
+<span class="nc" id="L28">        this.countryName = countryName;</span>
+<span class="nc" id="L29">    }</span>
 
     public int getYear() {
-<span class="nc" id="L33">        return year;</span>
+<span class="nc" id="L32">        return year;</span>
     }
 
     public void setYear(int year) {
-<span class="nc" id="L37">        this.year = year;</span>
-<span class="nc" id="L38">    }</span>
+<span class="nc" id="L36">        this.year = year;</span>
+<span class="nc" id="L37">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

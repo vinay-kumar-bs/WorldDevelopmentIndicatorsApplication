@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2025-02-03T09:53:36" hostname="VONFX27F0QKQ4" time="0.018">
+<testsuite name="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2025-02-14T05:48:14" hostname="VONFX27F0QKQ4" time="0.018">
   <properties/>
   <testcase name="testFindUniqueCountries_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
-  <testcase name="testGetDevelopmentIndicatorsDataByCountry_WhenInvalidCountryName_ThrowsException" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.002"/>
+  <testcase name="testGetDevelopmentIndicatorsDataByCountry_WhenInvalidCountryName_ThrowsException" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
   <testcase name="testUpdateData_WhenCountryDataDoesNotExists_ThrowsException" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
   <testcase name="testIsValidCountryName_InvalidName" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
-  <testcase name="testFindUniqueYears_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
+  <testcase name="testFindUniqueYears_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
   <testcase name="testCreateData_WhenDataGiven_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
-  <testcase name="testDeleteData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
-  <testcase name="testRetrieveData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
-  <testcase name="testIsDataExists_DataExists" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
-  <testcase name="testGetDevelopmentIndicatorsDataByCountry_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
+  <testcase name="testDeleteData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
+  <testcase name="testRetrieveData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
+  <testcase name="testIsDataExists_DataExists" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
+  <testcase name="testGetDevelopmentIndicatorsDataByCountry_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
   <testcase name="testUpdateDevIndData_WhenNullDataPassed_ThrowsException" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
-  <testcase name="testIsDataExists_DataDoesNotExist" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
+  <testcase name="testIsDataExists_DataDoesNotExist" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
   <testcase name="testUpdateData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
   <testcase name="testIsValidCountryName_ValidName" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
   <testcase name="testIsValidYear_ValidYear" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
   <testcase name="testRetrieveData_WhenDataNotFound_ThrowsException" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
   <testcase name="testGetDevelopmentIndicatorsDataByCountry_WhenDataNotFound_ThrowsException" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
-  <testcase name="testFindUniqueCountries_WhenNoCountriesFound_ReturnsEmptyList" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
+  <testcase name="testFindUniqueCountries_WhenNoCountriesFound_ReturnsEmptyList" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
   <testcase name="testFindUniqueYears_WhenNoYearsFound_ReturnsEmptyList" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
   <testcase name="testDeleteData_WhenDataNotFound_ThrowsException" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
   <testcase name="testCreateData_WhenNullDataPassed_ThrowsException" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
-  <testcase name="testCreateData_WhenDataExists_ThrowsException" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
-  <testcase name="testIsValidYear_InvalidYear" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.0"/>
-  <system-out><![CDATA[2025-02-03T15:23:36.426+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Invalid country name for getting data by country name: 123Invalid
-2025-02-03T15:23:36.427+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for update.
-2025-02-03T15:23:36.433+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data for country is null
-2025-02-03T15:23:36.436+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for country name: nonExistingCountry and year: 1970
-2025-02-03T15:23:36.437+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exists for country name: nonExistingCountry
-2025-02-03T15:23:36.439+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 1970
-2025-02-03T15:23:36.440+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data is null
-2025-02-03T15:23:36.441+05:30 ERROR 28921 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: China and year: 2015
+  <testcase name="testCreateData_WhenDataExists_ThrowsException" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
+  <testcase name="testIsValidYear_InvalidYear" classname="com.wbdi.WorldBankDevIndApplication.ServiceTest.DevelopmentIndicatorsServiceTest" time="0.001"/>
+  <system-out><![CDATA[2025-02-14T11:18:14.218+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Invalid country name for getting data by country name: 123Invalid
+2025-02-14T11:18:14.219+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for update.
+2025-02-14T11:18:14.225+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data for country is null
+2025-02-14T11:18:14.228+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for country name: nonExistingCountry and year: 1970
+2025-02-14T11:18:14.228+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exists for country name: nonExistingCountry
+2025-02-14T11:18:14.230+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 1970
+2025-02-14T11:18:14.231+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data is null
+2025-02-14T11:18:14.233+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [    Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: China and year: 2015
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

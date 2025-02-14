@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2025-02-03T09:53:30" hostname="VONFX27F0QKQ4" time="1.45">
+<testsuite name="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2025-02-14T05:48:09" hostname="VONFX27F0QKQ4" time="1.373">
   <properties/>
-  <testcase name="testGetDevelopmentIndicatorsDataByCountry_WhenInvalidCountry_ReturnsException" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.968"/>
-  <testcase name="testDevelopmentController_DeleteData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.023"/>
+  <testcase name="testGetDevelopmentIndicatorsDataByCountry_WhenInvalidCountry_ReturnsException" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.925"/>
+  <testcase name="testDevelopmentController_DeleteData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.026"/>
   <testcase name="testCreateData_DuplicateData_ReturnsConflict" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.151"/>
-  <testcase name="testGetUniqueYears_ReturnsData" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.043"/>
+  <testcase name="testGetUniqueYears_ReturnsData" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.041"/>
   <testcase name="testGetUniqueYears_WhenNoData_ReturnsEmptyList" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.014"/>
   <testcase name="testGetDevelopmentIndicatorsDataByCountry_ReturnsData" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.012"/>
-  <testcase name="testGetUniqueCountries_WhenNoData_ReturnsEmptyList" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.012"/>
+  <testcase name="testGetUniqueCountries_WhenNoData_ReturnsEmptyList" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.014"/>
   <testcase name="testDeleteData_NonExistingData_ReturnsNotFound" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.009"/>
-  <testcase name="testGetUniqueYears_ServerError_ReturnsException" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.014"/>
-  <testcase name="testCreateData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.017"/>
+  <testcase name="testGetUniqueYears_ServerError_ReturnsException" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.015"/>
+  <testcase name="testCreateData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.015"/>
   <testcase name="testUpdateData_NonExistingData_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.014"/>
-  <testcase name="testGetUniqueCountries_ReturnsData" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.01"/>
-  <testcase name="testUpdateData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.014"/>
-  <testcase name="testRetrieveData_MissingFields_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.022"/>
-  <testcase name="testRetrieveData_WhenNonExistingData_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.01"/>
-  <testcase name="testGetCountries_ServerError_ReturnsException" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.012"/>
-  <testcase name="testCreateData_ServerError_ReturnsNothing" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.015"/>
-  <testcase name="testRetrieveData_ServerError_ReturnsError" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.015"/>
-  <testcase name="testRetrieveData_ReturnsData" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.015"/>
-  <testcase name="testGetDevelopmentIndicatorsDataByCountry_WhenDataNotFound_ReturnsEmptyList" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.012"/>
-  <testcase name="testGetDevelopmentIndicatorsDataByCountry_WhenServerError_ReturnsException" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.014"/>
-  <testcase name="testCreateData_WhenMissingFields_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.03"/>
-  <system-out><![CDATA[15:23:31.330 [Test worker] INFO org.hibernate.validator.internal.util.Version -- HV000001: Hibernate Validator 8.0.2.Final
-15:23:31.796 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:31.796 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:31.799 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 2 ms
-15:23:31.870 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving data of country name: any
-15:23:31.871 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved for country name any successfully.
-15:23:31.873 [Test worker] WARN com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Invalid country name for retrieving country name No data found
-15:23:31.901 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:31.901 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:31.902 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
-15:23:31.906 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for deleting data of country name: Kenya and year: 2010
-15:23:31.907 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data deleted successfully.
-15:23:31.925 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:31.925 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:31.925 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.063 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController with data: com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData@391cc6cf
-15:23:32.064 [Test worker] WARN com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Conflict While adding the data: Duplicate entry
-15:23:32.073 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.073 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.074 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
-15:23:32.075 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique years.
-15:23:32.075 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique years retrieved successfully.
-15:23:32.116 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.116 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.116 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.117 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique years.
-15:23:32.117 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique years retrieved successfully.
-15:23:32.129 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.129 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.129 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.130 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving data of country name: Italy
-15:23:32.130 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved for country name Italy successfully.
-15:23:32.141 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.141 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.141 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.143 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique countries.
-15:23:32.143 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique countries retrieved successfully.
-15:23:32.153 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.153 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.153 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.154 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for deleting data of country name: NonExistingCountry and year: 9999
-15:23:32.155 [Test worker] WARN com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Bad request while deleting data: Data not found
-15:23:32.162 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.162 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.162 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.162 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique years.
-15:23:32.162 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique years retrieved successfully.
-15:23:32.163 [Test worker] ERROR com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Error while retrieving unique years: DB error
+  <testcase name="testGetUniqueCountries_ReturnsData" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.008"/>
+  <testcase name="testUpdateData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.012"/>
+  <testcase name="testRetrieveData_MissingFields_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.015"/>
+  <testcase name="testRetrieveData_WhenNonExistingData_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.007"/>
+  <testcase name="testGetCountries_ServerError_ReturnsException" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.01"/>
+  <testcase name="testCreateData_ServerError_ReturnsNothing" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.013"/>
+  <testcase name="testRetrieveData_ServerError_ReturnsError" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.011"/>
+  <testcase name="testRetrieveData_ReturnsData" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.012"/>
+  <testcase name="testGetDevelopmentIndicatorsDataByCountry_WhenDataNotFound_ReturnsEmptyList" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.008"/>
+  <testcase name="testGetDevelopmentIndicatorsDataByCountry_WhenServerError_ReturnsException" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.008"/>
+  <testcase name="testCreateData_WhenMissingFields_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest" time="0.027"/>
+  <system-out><![CDATA[11:18:09.493 [Test worker] INFO org.hibernate.validator.internal.util.Version -- HV000001: Hibernate Validator 8.0.2.Final
+11:18:09.930 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:09.930 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:09.932 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+11:18:10.003 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving data of country name: any
+11:18:10.004 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved for country name any successfully.
+11:18:10.006 [Test worker] WARN com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Invalid country name for retrieving country name No data found
+11:18:10.036 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.036 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.036 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.041 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for deleting data of country name: Kenya and year: 2010
+11:18:10.042 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data deleted successfully.
+11:18:10.058 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.058 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.058 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.198 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController with data: com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData@74974165
+11:18:10.199 [Test worker] WARN com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Conflict While adding the data: Duplicate entry
+11:18:10.209 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.209 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.209 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.210 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique years.
+11:18:10.211 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique years retrieved successfully.
+11:18:10.250 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.250 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.251 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+11:18:10.251 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique years.
+11:18:10.252 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique years retrieved successfully.
+11:18:10.263 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.263 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.263 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.264 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving data of country name: Italy
+11:18:10.264 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved for country name Italy successfully.
+11:18:10.277 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.277 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.277 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.278 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique countries.
+11:18:10.279 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique countries retrieved successfully.
+11:18:10.289 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.290 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.290 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.291 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for deleting data of country name: NonExistingCountry and year: 9999
+11:18:10.291 [Test worker] WARN com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Bad request while deleting data: Data not found
+11:18:10.298 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.298 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.298 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.299 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique years.
+11:18:10.299 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique years retrieved successfully.
+11:18:10.300 [Test worker] ERROR com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Error while retrieving unique years: DB error
 java.lang.RuntimeException: DB error
-	at com.wbdi.WorldBankDevIndApplication.Service.DevelopmentIndicatorsService.getUniqueYears(DevelopmentIndicatorsService.java:78)
-	at com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController.getYear(DevelopmentIndicatorsController.java:127)
+	at com.wbdi.WorldBankDevIndApplication.Service.DevelopmentIndicatorsService.getUniqueYears(DevelopmentIndicatorsService.java:76)
+	at com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController.getYear(DevelopmentIndicatorsController.java:122)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
@@ -93,7 +93,7 @@ java.lang.RuntimeException: DB error
 	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
 	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
 	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
-	at com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest.testGetUniqueYears_ServerError_ReturnsException(DevelopmentIndicatorsControllerTest.java:373)
+	at com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest.testGetUniqueYears_ServerError_ReturnsException(DevelopmentIndicatorsControllerTest.java:372)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -139,45 +139,45 @@ java.lang.RuntimeException: DB error
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-15:23:32.178 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.178 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.178 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.185 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController with data: com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData@6e1ef044
-15:23:32.185 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data added successfully.
-15:23:32.193 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.193 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.193 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.200 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController to update data: com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData@3e6a55fb
-15:23:32.200 [Test worker] WARN com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Bad request for updating data: Data not found
-15:23:32.208 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.208 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.208 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.209 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique countries.
-15:23:32.209 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique countries retrieved successfully.
-15:23:32.217 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.217 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.217 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.223 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController to update data: com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData@7b4fbedb
-15:23:32.223 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data updated successfully
-15:23:32.231 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.231 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.231 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.246 [Test worker] WARN org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'countryName' for method parameter type String is not present]
-15:23:32.254 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.254 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.254 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.255 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController to retrieve data for country: NonExistingCountry, year: 9999
-15:23:32.255 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved successfully.
-15:23:32.256 [Test worker] WARN com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Bad request while retrieving data: No data found
-15:23:32.264 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.264 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.264 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.265 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique countries.
-15:23:32.265 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique countries retrieved successfully.
-15:23:32.265 [Test worker] ERROR com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Error while retrieving unique countries: DB error
+11:18:10.313 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.313 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.313 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.321 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController with data: com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData@46f43f50
+11:18:10.321 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data added successfully.
+11:18:10.328 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.328 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.328 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.335 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController to update data: com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData@64a0a1c6
+11:18:10.335 [Test worker] WARN com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Bad request for updating data: Data not found
+11:18:10.341 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.341 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.341 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.342 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique countries.
+11:18:10.342 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique countries retrieved successfully.
+11:18:10.348 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.349 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.349 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.354 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController to update data: com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData@6ca95b1e
+11:18:10.355 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data updated successfully
+11:18:10.360 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.360 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.361 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+11:18:10.370 [Test worker] WARN org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'countryName' for method parameter type String is not present]
+11:18:10.376 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.376 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.376 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.377 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController to retrieve data for country: NonExistingCountry, year: 9999
+11:18:10.377 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved successfully.
+11:18:10.377 [Test worker] WARN com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Bad request while retrieving data: No data found
+11:18:10.384 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.384 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.384 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.385 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving unique countries.
+11:18:10.385 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Unique countries retrieved successfully.
+11:18:10.385 [Test worker] ERROR com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Error while retrieving unique countries: DB error
 java.lang.RuntimeException: DB error
-	at com.wbdi.WorldBankDevIndApplication.Service.DevelopmentIndicatorsService.getUniqueCountries(DevelopmentIndicatorsService.java:72)
-	at com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController.getCountry(DevelopmentIndicatorsController.java:111)
+	at com.wbdi.WorldBankDevIndApplication.Service.DevelopmentIndicatorsService.getUniqueCountries(DevelopmentIndicatorsService.java:70)
+	at com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController.getCountry(DevelopmentIndicatorsController.java:107)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
@@ -197,7 +197,7 @@ java.lang.RuntimeException: DB error
 	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
 	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
 	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
-	at com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest.testGetCountries_ServerError_ReturnsException(DevelopmentIndicatorsControllerTest.java:341)
+	at com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest.testGetCountries_ServerError_ReturnsException(DevelopmentIndicatorsControllerTest.java:340)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -243,13 +243,13 @@ java.lang.RuntimeException: DB error
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-15:23:32.274 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.274 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.274 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.282 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController with data: com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData@49ffd0cb
-15:23:32.283 [Test worker] ERROR com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Error while adding the data: Database error
+11:18:10.393 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.393 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.393 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.400 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController with data: com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData@7158a28c
+11:18:10.400 [Test worker] ERROR com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Error while adding the data: Database error
 java.lang.RuntimeException: Database error
-	at com.wbdi.WorldBankDevIndApplication.Service.DevelopmentIndicatorsService.createDevIndData(DevelopmentIndicatorsService.java:85)
+	at com.wbdi.WorldBankDevIndApplication.Service.DevelopmentIndicatorsService.createDevIndData(DevelopmentIndicatorsService.java:82)
 	at com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController.createData(DevelopmentIndicatorsController.java:31)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -316,15 +316,15 @@ java.lang.RuntimeException: Database error
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-15:23:32.289 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.289 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.290 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
-15:23:32.291 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController to retrieve data for country: USA, year: 2020
-15:23:32.291 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved successfully.
-15:23:32.291 [Test worker] ERROR com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Error in retrieving data: Database error
+11:18:10.407 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.407 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.407 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.408 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController to retrieve data for country: USA, year: 2020
+11:18:10.408 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved successfully.
+11:18:10.409 [Test worker] ERROR com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Error in retrieving data: Database error
 java.lang.RuntimeException: Database error
-	at com.wbdi.WorldBankDevIndApplication.Service.DevelopmentIndicatorsService.retrieveDevIndData(DevelopmentIndicatorsService.java:104)
-	at com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController.retrieveData(DevelopmentIndicatorsController.java:52)
+	at com.wbdi.WorldBankDevIndApplication.Service.DevelopmentIndicatorsService.retrieveDevIndData(DevelopmentIndicatorsService.java:100)
+	at com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController.retrieveData(DevelopmentIndicatorsController.java:51)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
@@ -344,7 +344,7 @@ java.lang.RuntimeException: Database error
 	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
 	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
 	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
-	at com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest.testRetrieveData_ServerError_ReturnsError(DevelopmentIndicatorsControllerTest.java:216)
+	at com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest.testRetrieveData_ServerError_ReturnsError(DevelopmentIndicatorsControllerTest.java:215)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -390,25 +390,25 @@ java.lang.RuntimeException: Database error
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-15:23:32.307 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.307 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.307 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.308 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController to retrieve data for country: Italy, year: 2015
-15:23:32.308 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved successfully.
-15:23:32.322 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.323 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.323 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.324 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving data of country name: nonExistingCountry
-15:23:32.324 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved for country name nonExistingCountry successfully.
-15:23:32.333 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.333 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.333 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.335 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving data of country name: any
-15:23:32.335 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved for country name any successfully.
-15:23:32.335 [Test worker] ERROR com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Error While retrieving the data by country name null
+11:18:10.420 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.420 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.421 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+11:18:10.422 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController to retrieve data for country: Italy, year: 2015
+11:18:10.422 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved successfully.
+11:18:10.431 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.431 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.431 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.432 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving data of country name: nonExistingCountry
+11:18:10.432 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved for country name nonExistingCountry successfully.
+11:18:10.439 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.439 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.439 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.440 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Executing class com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController for retrieving data of country name: any
+11:18:10.440 [Test worker] INFO com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Data retrieved for country name any successfully.
+11:18:10.440 [Test worker] ERROR com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController -- Error While retrieving the data by country name null
 java.lang.RuntimeException: null
-	at com.wbdi.WorldBankDevIndApplication.Service.DevelopmentIndicatorsService.getDevelopmentIndicatorsDataByCountry(DevelopmentIndicatorsService.java:152)
-	at com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController.getDevelopmentIndicatorsDataByCountry(DevelopmentIndicatorsController.java:140)
+	at com.wbdi.WorldBankDevIndApplication.Service.DevelopmentIndicatorsService.getDevelopmentIndicatorsDataByCountry(DevelopmentIndicatorsService.java:147)
+	at com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController.getDevelopmentIndicatorsDataByCountry(DevelopmentIndicatorsController.java:135)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
@@ -428,7 +428,7 @@ java.lang.RuntimeException: null
 	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
 	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
 	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
-	at com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest.testGetDevelopmentIndicatorsDataByCountry_WhenServerError_ReturnsException(DevelopmentIndicatorsControllerTest.java:427)
+	at com.wbdi.WorldBankDevIndApplication.ControllerTest.DevelopmentIndicatorsControllerTest.testGetDevelopmentIndicatorsDataByCountry_WhenServerError_ReturnsException(DevelopmentIndicatorsControllerTest.java:426)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -474,10 +474,10 @@ java.lang.RuntimeException: null
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-15:23:32.347 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-15:23:32.347 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-15:23:32.347 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
-15:23:32.371 [Test worker] WARN org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver -- Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController.createData(com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData): [Field error in object 'developmentIndicatorsData' on field 'countryName': rejected value [null]; codes [NotBlank.developmentIndicatorsData.countryName,NotBlank.countryName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [developmentIndicatorsData.countryName,countryName]; arguments []; default message [countryName]]; default message [It is required]] ]
+11:18:10.447 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+11:18:10.447 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+11:18:10.447 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+11:18:10.470 [Test worker] WARN org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver -- Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.wbdi.WorldBankDevIndApplication.Controller.DevelopmentIndicatorsController.createData(com.wbdi.WorldBankDevIndApplication.Model.DevelopmentIndicatorsData): [Field error in object 'developmentIndicatorsData' on field 'countryName': rejected value [null]; codes [NotBlank.developmentIndicatorsData.countryName,NotBlank.countryName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [developmentIndicatorsData.countryName,countryName]; arguments []; default message [countryName]]; default message [It is required]] ]
 ]]></system-out>
   <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
 WARNING: A Java agent has been loaded dynamically (/Users/vbs/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/a38b16385e867f59a641330f0362ebe742788ed8/byte-buddy-agent-1.15.11.jar)
