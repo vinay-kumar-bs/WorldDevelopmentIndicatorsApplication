@@ -1,6 +1,0 @@
-# This Dockerfile copies the frontend build into the backend and builds the backend JAR
-FROM eclipse-temurin:21-jdk-jammy
-WORKDIR /Backend
-COPY ../Backend/ ./
-COPY ../Frontend/dist ./src/main/resources/static/
-RUN ./gradlew clean build

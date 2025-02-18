@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2025-02-14T05:48:13" hostname="VONFX27F0QKQ4" time="0.475">
+<testsuite name="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2025-02-18T17:16:28" hostname="VONFX27F0QKQ4" time="0.443">
   <properties/>
-  <testcase name="testGetUniqueCountries_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.231"/>
-  <testcase name="testDeleteData_NonExistingData_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.043"/>
-  <testcase name="testUpdateData_WhenValidData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.049"/>
-  <testcase name="testGetUniqueCountries_WhenEmptyList_ReturnsNothing" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.01"/>
-  <testcase name="testGetUniqueYears_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.012"/>
-  <testcase name="testDeleteData_WhenInvalidYear_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.006"/>
+  <testcase name="testGetUniqueCountries_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.23"/>
+  <testcase name="testDeleteData_NonExistingData_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.041"/>
+  <testcase name="testUpdateData_WhenValidData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.043"/>
+  <testcase name="testGetUniqueCountries_WhenEmptyList_ReturnsNothing" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.006"/>
+  <testcase name="testGetUniqueYears_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.011"/>
+  <testcase name="testDeleteData_WhenInvalidYear_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.005"/>
   <testcase name="testDeleteData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.01"/>
-  <testcase name="testCreateData_WhenDuplicateData_ReturnsConflict" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.01"/>
-  <testcase name="testGetDevelopmentIndicatorsDataByCountry_NonExistingCountryName_ReturnsNotFound" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.011"/>
-  <testcase name="testDeleteData_MissingParameters_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.019"/>
-  <testcase name="testCreateData_WhenNullData_ReturnsRunTimeException" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.008"/>
-  <testcase name="testGetDevelopmentIndicatorsDataByCountry_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.015"/>
-  <testcase name="testUpdateData_NonExistingData_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.007"/>
-  <testcase name="testRetrieveData_WhenDataNotExists_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.006"/>
+  <testcase name="testCreateData_WhenDuplicateData_ReturnsConflict" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.009"/>
+  <testcase name="testGetDevelopmentIndicatorsDataByCountry_NonExistingCountryName_ReturnsNotFound" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.007"/>
+  <testcase name="testDeleteData_MissingParameters_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.015"/>
+  <testcase name="testCreateData_WhenNullData_ReturnsRunTimeException" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.007"/>
+  <testcase name="testGetDevelopmentIndicatorsDataByCountry_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.011"/>
+  <testcase name="testUpdateData_NonExistingData_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.006"/>
+  <testcase name="testRetrieveData_WhenDataNotExists_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.004"/>
   <testcase name="testRetrieveData_WhenValidRequest_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.011"/>
   <testcase name="testDeleteData_WhenInvalidCountryName_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.006"/>
   <testcase name="testCreateData_WhenValidData_ReturnsSuccess" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.008"/>
   <testcase name="testRetrieveData_MissingParameters_ReturnsBadRequest" classname="com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest" time="0.005"/>
-  <system-out><![CDATA[11:18:10.509 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest]: DevelopmentIndicatorsIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:18:10.580 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.wbdi.WorldBankDevIndApplication.WorldBankDevIndApplication for test class com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest
+  <system-out><![CDATA[22:46:25.642 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest]: DevelopmentIndicatorsIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:46:25.717 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.wbdi.WorldBankDevIndApplication.WorldBankDevIndApplication for test class com.wbdi.WorldBankDevIndApplication.IntegrationTest.DevelopmentIndicatorsIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -170,7 +170,7 @@ Hibernate:
     where
         did1_0.country_name=? 
         and did1_0."year"=?
-2025-02-14T11:18:13.838+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [o-auto-1-exec-2] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: Canada and year: 2016
+2025-02-18T22:46:28.922+05:30 ERROR 1804 --- [WorldBankDevIndApplication] [o-auto-1-exec-2] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: Canada and year: 2016
 Hibernate: 
     select
         count(*) 
@@ -630,7 +630,7 @@ Hibernate:
     where
         did1_0.country_name=? 
         and did1_0."year"=?
-2025-02-14T11:18:13.963+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [o-auto-1-exec-8] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: American Samoa and year: 1960
+2025-02-18T22:46:29.034+05:30 ERROR 1804 --- [WorldBankDevIndApplication] [o-auto-1-exec-8] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: American Samoa and year: 1960
 Hibernate: 
     select
         did1_0.country_name,
@@ -678,7 +678,7 @@ Hibernate:
         development_indicators did1_0 
     where
         did1_0.country_name=?
-2025-02-14T11:18:13.973+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [-auto-1-exec-10] c.w.W.S.DevelopmentIndicatorsService     : Data does not exists for country name: nonExistingCountry
+2025-02-18T22:46:29.043+05:30 ERROR 1804 --- [WorldBankDevIndApplication] [o-auto-1-exec-9] c.w.W.S.DevelopmentIndicatorsService     : Data does not exists for country name: nonExistingCountry
 Hibernate: 
     select
         did1_0.country_name,
@@ -898,7 +898,7 @@ Hibernate:
     where
         did1_0.country_name=? 
         and did1_0."year"=?
-2025-02-14T11:18:14.027+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [o-auto-1-exec-3] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for update.
+2025-02-18T22:46:29.085+05:30 ERROR 1804 --- [WorldBankDevIndApplication] [o-auto-1-exec-3] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for update.
 Hibernate: 
     select
         did1_0.country_name,
@@ -1059,7 +1059,7 @@ Hibernate:
     where
         did1_0.country_name=? 
         and did1_0."year"=?
-2025-02-14T11:18:14.052+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [o-auto-1-exec-6] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 2022
+2025-02-18T22:46:29.107+05:30 ERROR 1804 --- [WorldBankDevIndApplication] [o-auto-1-exec-6] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 2022
 Hibernate: 
     select
         did1_0.country_name,

@@ -1,0 +1,13 @@
+FROM eclipse-temurin:21-jdk-jammy
+
+WORKDIR /app
+COPY ./Backend/ ./
+
+# Copy frontend build output (dist) to backend's static folder
+COPY ./Frontend/dist/ ./Backend/src/main/resources/static/
+
+# Give execute permission to gradlew (Important if it's not already executable)
+RUN chmod +x ./gradlew
+
+# Build the application (this will create a JAR file in build/libs/)
+RUN ./gradlew clean build -x test

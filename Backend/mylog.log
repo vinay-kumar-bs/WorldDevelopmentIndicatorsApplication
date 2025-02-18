@@ -11,3 +11,16 @@
 2025-02-14T11:18:14.230+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 1970
 2025-02-14T11:18:14.231+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data is null
 2025-02-14T11:18:14.233+05:30 ERROR 3793 --- [WorldBankDevIndApplication] [Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: China and year: 2015
+2025-02-14T17:08:10.514+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [http-nio-auto-1-exec-2] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: Canada and year: 2016
+2025-02-14T17:08:10.631+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [http-nio-auto-1-exec-8] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: American Samoa and year: 1960
+2025-02-14T17:08:10.642+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [http-nio-auto-1-exec-9] c.w.W.S.DevelopmentIndicatorsService     : Data does not exists for country name: nonExistingCountry
+2025-02-14T17:08:10.687+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [http-nio-auto-1-exec-3] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for update.
+2025-02-14T17:08:10.711+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [http-nio-auto-1-exec-6] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 2022
+2025-02-14T17:08:10.867+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [Test worker] c.w.W.S.DevelopmentIndicatorsService     : Invalid country name for getting data by country name: 123Invalid
+2025-02-14T17:08:10.868+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for update.
+2025-02-14T17:08:10.875+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data for country is null
+2025-02-14T17:08:10.878+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exist for country name: nonExistingCountry and year: 1970
+2025-02-14T17:08:10.879+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data does not exists for country name: nonExistingCountry
+2025-02-14T17:08:10.882+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data not available for country name: nonExistingCountry and year: 1970
+2025-02-14T17:08:10.883+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data is null
+2025-02-14T17:08:10.884+05:30 ERROR 12799 --- [WorldBankDevIndApplication] [Test worker] c.w.W.S.DevelopmentIndicatorsService     : Data already exists for country name: China and year: 2015

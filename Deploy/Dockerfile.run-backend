@@ -1,6 +1,37 @@
-# This Dockerfile runs the built Spring Boot JAR file
-FROM eclipse-temurin:21-jdk-jammy
+FROM node:20-alpine
+
 WORKDIR /app
-COPY ../Backend/build/libs/WorldBankDevIndApplication-0.0.1-SNAPSHOT.jar ./app.jar
+COPY ./Frontend/package*.json ./
+RUN npm install
+
+COPY ./Frontend/ ./
+RUN npm run build
+
+FROM eclipse-temurin:21-jdk-jammy
+
+WORKDIR /app
+COPY ./Backend/ ./
+
+# Copy frontend build output (dist) to backend's static folder
+COPY ./Frontend/dist/ ./Backend/src/main/resources/static/
+
+# Give execute permission to gradlew (Important if it's not already executable)
+RUN chmod +x ./gradlew
+
+# Build the application (this will create a JAR file in build/libs/)
+RUN ./gradlew clean build -x test
+
+# Use JDK 21 runtime image
+FROM eclipse-temurin:21-jdk-jammy
+
+# Set working directory inside the container
+WORKDIR /app
+
+# Copy the built JAR from your local machine to the container
+COPY ./Backend/build/libs/WorldBankDevIndApplication-0.0.1-SNAPSHOT.jar ./app.jar
+
+# Expose port 8080 (Spring Boot default port)
 EXPOSE 8080
+
+# Command to run the Spring Boot application
 ENTRYPOINT ["java", "-jar", "app.jar"]
